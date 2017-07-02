@@ -1,0 +1,16 @@
+.carousel.slide(data-ride='carousel')
+  ol.carousel-indicators
+    li.active
+    li
+    li
+  .carousel-inner
+    .item.active
+      img.slide-image(src='http://placehold.it/800x300' alt='')
+    .item
+      img.slide-image(src='http://placehold.it/800x300' alt='')
+    .item
+      img.slide-image(src='http://placehold.it/800x300' alt='')
+  a.left.carousel-control(href="javascript:$('.carousel').carousel('prev')")
+    span.glyphicon.glyphicon-chevron-left
+  a.right.carousel-control(href="javascript:$('.carousel').carousel('next')")
+    span.glyphicon.glyphicon-chevron-right

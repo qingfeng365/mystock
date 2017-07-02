@@ -1,0 +1,12 @@
+form(name='searchForm', role='form')
+  .form-group
+    label(for='productTitle') 商品名称:
+    input#productTitle.form-control(type='text', placeholder='商品名称')
+  .form-group
+    label(for='productPrice') 商品价格:
+    input#productPrice.form-control(type='number', min='0', placeholder='商品价格')
+  .form-group
+    label(for='productCategory') 商品分类:
+    select#productCategory.form-control
+  .form-group
+    button.btn.btn-primary.btn-block(type='submit') 搜索
