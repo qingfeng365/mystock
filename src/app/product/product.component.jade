@@ -4,7 +4,7 @@
     .caption
       h4.pull-right {{product.price}}
       h4
-        a {{product.title}}
+        a([routerLink]="['/product', product.title]") {{product.title}}
       p {{product.desc}}
     div
       app-stars([rating]='product.rating')
