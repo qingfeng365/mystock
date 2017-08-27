@@ -1,4 +1,8 @@
-.col-md-4.col-sm-4.col-lg-4(*ngFor='let product of products')
+.row
+  .col-sm-12
+    .form-group
+      input.form-control([formControl]="searchCtrl", placeholder="请输入商品名称")
+.col-md-4.col-sm-4.col-lg-4(*ngFor='let product of products | filter:"title":keyword')
   .thumbnail
     img(src='http://placehold.it/320x150')
     .caption
@@ -6,5 +10,8 @@
       h4
         a([routerLink]="['/product', product.id]") {{product.title}}
       p {{product.desc}}
+      p {{product.rating}}
     div
-      app-stars([rating]='product.rating')
+      app-stars([(rating)]='product.rating')
+      //- app-stars([rating]='product.rating',
+      //-   (ratingChange)="product.rating = $event")
